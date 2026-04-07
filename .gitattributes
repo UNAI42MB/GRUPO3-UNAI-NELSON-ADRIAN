@@ -9,7 +9,8 @@
 *.gradle text eol=crlf
 *.md text eol=crlf
 *.bat text eol=crlf
-*.sh text eol=lf  # scripts bash suelen requerir LF
+*.sh text eol=lf  
+# scripts bash suelen requerir LF
 
 
 # Archivos binarios: evita diffs

@@ -10,7 +10,6 @@
 /target/
 #Imagenes
 *.jpg
-*.jpeg
 *.gif
 *.bmp
 *.tiff

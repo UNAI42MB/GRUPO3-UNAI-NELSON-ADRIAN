@@ -9,7 +9,6 @@
 /build/
 /target/
 #Imagenes
-*.png
 *.jpg
 *.jpeg
 *.gif

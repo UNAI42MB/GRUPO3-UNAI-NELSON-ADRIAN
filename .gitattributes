@@ -1,0 +1,28 @@
+* text=auto eol=crlf
+# Archivos Java: tratar como texto con CRLF
+*.java text eol=crlf
+
+
+# Archivos de configuración y scripts
+*.xml text eol=crlf
+*.properties text eol=crlf
+*.gradle text eol=crlf
+*.md text eol=crlf
+*.bat text eol=crlf
+*.sh text eol=lf  
+# scripts bash suelen requerir LF
+
+
+# Archivos binarios: evita diffs
+*.jar binary
+*.class binary
+*.png binary
+*.jpg binary
+*.gif binary
+
+
+# Ignorar archivos al exportar (por ejemplo, al hacer git archive)
+*.log export-ignore
+*.tmp export-ignore
+*.iml export-ignore
+.idea/ export-ignore

@@ -92,15 +92,54 @@ insert into productos(nombre_product,fecha_vencimiento,precios) values("Manzanas
 insert into transportista(nombre_trasp,fecha_nacimiento_tlfn,dni)values("Laura","Fernández López",14/02/1999,+34693482915,91820463L),("Sergio","Martínez Gómez",22/09/1988,+1202884731,64012958R),("Daniela","Rodríguez Torres",03/05/2003,+52449903552,28471950K),("Pablo","Sánchez Ruiz",19/12/1995,+49171882304,75918420M),("Andrea","Morales Castillo",28/06/2001,+552198412730,49281736Z),("Hugo","Navarro Días",+81705521882,18304752H),("Sofía","Herrera Molina",30/10/1997,+33674219804,507392844P);
 insert into cliente(nombre_client,apellidos,fecha_nacimiento,tlfn,dni)values("Maria","Zambrano",01/01/2000,+34648739521,49283751J),("Juan","Marquez",12/07/1990,+1305771624,18392044M),("Carlos","Perez",20/10/2004,+52812903455,50719382K),("José","Hernandez",05/02/2015,+49160883120,92841057L),("Alfredo","Lopez",07/03/1998,+55119824166,31485972C),("Kevin","Rodriguez",17/08/2002,+81805531904,76029418H),("Iker","Gonzalez",11/11/2011,+33672418955,24971380S);
 
+#Modificar el telefono de el cliente con id = 3
+update cliente
+set tlfn = '+34987654321'
+where ident_client = 3;
 
+#Modificar el id de el cliente con id = 5
+update cliente
+set ident_tiend = 2
+where ident_client = 5;
 
+#Modificar el id de el producto con id 10
+update productos
+set ident_prov = 1
+where ident_product = 10;
 
+#Modificar el precio de el producto  con id = 4
+update productos
+set precios = 19.99
+where ident_product = 4;
 
+#Elimina el cliente  con id = 2
+delete from cliente
+where ident_client = 2;
 
+#Elimina el proveedor con id = 3
+delete from proveedor
+where ident_prov = 3;
 
+#Eliminar producto con id = 7
+delete from productos
+where ident_product = 7;
 
+#Mostrar los productos con su proveedor
+select p.nombre_product, pr.empresa
+from productos p
+left join proveedor pr on p.ident_prov = pr.ident_prov;
 
+#Ver productos por categoria
+select p.nombre_product, c.nombre_categor
+from productos p
+join categoria c on p.ident_categor = c.ident_categor
+order by c.nombre_categor;
 
+# Productos apunto de vencerse
+select nombre_product, fecha_vencimiento
+from productos
+where fecha_vencimiento < '2026-05-01'
+order by fecha_vencimiento;
 
 
 

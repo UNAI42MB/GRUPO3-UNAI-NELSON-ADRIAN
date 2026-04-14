@@ -35,21 +35,31 @@ DNI varchar(9)not null unique,
 check(DNI regexp"[0-9]{8} [A-Z]$") ,
 ident_tiend int,
 foreign key(ident_tiend) references tienda(ident_tiend)
+on update cascade
+on delete set null
 );
 
 create table Tranportista_tienda(
 ident_trasp int,
 ident_tiend int,
-foreign key (ident_trasp) references transportista(ident_trasp),
-foreign key (ident_tiend) references tienda(ident_tiend),
+foreign key (ident_trasp) references transportista(ident_trasp)
+on update cascade
+on delete cascade,
+foreign key (ident_tiend) references tienda(ident_tiend)
+on update cascade
+on delete cascade,
 primary key(ident_tiend, ident_trasp)
 );
 
 create table Proveedor_tienda (
 ident_prov int,
 ident_tiend int,
-foreign key (ident_prov) references proveedor(ident_prov),
-foreign key (ident_tiend) references tienda(ident_tiend),
+foreign key (ident_prov) references proveedor(ident_prov)
+on update cascade
+on delete cascade,
+foreign key (ident_tiend) references tienda(ident_tiend)
+on update cascade
+on delete cascade,
 primary key(ident_tiend, ident_prov)
 );
 

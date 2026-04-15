@@ -103,6 +103,9 @@ INSERT INTO producto(nombre_product, fecha_vencimiento, precios) VALUES ("Manzan
 insert into transportista(nombre_trasp, apellidos, fecha_nacimiento,tlfn, dni) values ("Laura","Fernández López",'1999-02-14',"+34 693 48 29 15",'91820463L'),("Sergio","Martínez Gómez",'1988-09-22',"+12 028 84 73 12",'64012958R'),("Daniela","Rodríguez Torres",'2003-05-03',"+52 449 90 35 52",'28471950K'),("Pablo","Sánchez Ruiz",'1995-12-19',"+49 171 88 23 04",'75918420M'),("Andrea","Morales Castillo",'2001-06-28',"+552 198 41 27 30",'49281736Z'),("Hugo","Navarro Días","1984-06-05","+81 705 52 18 82",'18304752H'),("Sofía","Herrera Molina",'1997-10-30',"+33 674 21 98 04",'57392844P');
 insert into cliente(nombre_client, apellidos, fecha_nacimiento, tlfn, dni) values ("Maria","Zambrano",'2000-01-01',"+34 648 73 95 21",'49283751J'),("Juan","Marquez",'1990-07-12',"+1 305 77 16 24",'18392044M'),("Carlos","Perez",'2004-10-20',"+52 812 90 34 55",'50719382K'),("José","Hernandez",'2015-02-05',"+49 160 88 31 20",'92841057L'),("Alfredo","Lopez",'1998-03-07',"+55 119 82 41 66",'31485972C'),("Kevin","Rodriguez",'2002-08-17',"+81 805 53 19 04",'76029418H'),("Iker","Gonzalez",'2011-11-11',"+33 672 41 89 55",'24971380S');
 
+-- -------------------------------------------------------- --
+# PARTE DE CRUD #
+-- -------------------------------------------------------- --
 #Modificar el telefono de el cliente con id = 3
 update cliente
 set tlfn = '+34987654321'
@@ -151,3 +154,12 @@ select nombre_product, fecha_vencimiento
 from productos
 where fecha_vencimiento < '2026-05-01'
 order by fecha_vencimiento;
+
+-- -------------------------------------------------------- --
+# CONSULTAS AVANZADAS #
+-- -------------------------------------------------------- --
+
+
+
+
+

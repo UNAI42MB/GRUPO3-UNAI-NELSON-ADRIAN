@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="U.N.A_Fruteria.jnlp">
+  <information>
+    <title>U.N.A_Fruteria</title>
+    <vendor>adria</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="U.N.A_Fruteria.jar" size="2616490" download="eager" />
+    <jar href="lib\AbsoluteLayout.jar" size="17150" download="eager" />
+    <jar href="lib\mysql-connector-j-9.6.0.jar" size="2602989" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="u.n.a_fruteria.UNA_Fruteria"  name="U.N.A_Fruteria" />
+  <update check="always"/>
+</jnlp>

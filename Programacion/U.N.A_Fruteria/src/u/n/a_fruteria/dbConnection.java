@@ -13,9 +13,9 @@ import java.sql.*;
  * @author adria
  */
 public class dbConnection {
-            static String url = "jdbc:mysql://localhost:3306/instituto_avanzado";
-    static String user = "root";
-    static String pass = "Adrititan2007";
+        static String url = "jdbc:mysql://192.168.56.1:3307/fruteria";
+    static String user = "usuario";
+    static String pass = "1234";    
     
     
     public static Connection conectar(){

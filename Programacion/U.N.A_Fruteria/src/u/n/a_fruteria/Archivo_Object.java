@@ -65,6 +65,20 @@ public class Archivo_Object {
         
     }
     
+    public ArrayList <Cliente> leerArrayList_Cliente (String ruta){
+        
+                     ArrayList<Cliente> cliente = new ArrayList<>();
+        
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta))){
+            cliente = (ArrayList<Cliente>) ois.readObject();
+            
+        } catch (IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        return cliente;
+        
+        
+    }
     public void Guardar_ArrayList_(String ruta, ArrayList<Proveedor> proveedor){
         
         try {
@@ -75,6 +89,21 @@ public class Archivo_Object {
         } catch (IOException ex) {
             Logger.getLogger(Archivo_Object.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+    }
+    
+    public ArrayList <Proveedor> leerArrayList_Proveedor (String ruta){
+        
+                          ArrayList<Proveedor> proveedor = new ArrayList<>();
+        
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta))){
+            proveedor = (ArrayList<Proveedor>) ois.readObject();
+            
+        } catch (IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        return proveedor;
         
         
     }

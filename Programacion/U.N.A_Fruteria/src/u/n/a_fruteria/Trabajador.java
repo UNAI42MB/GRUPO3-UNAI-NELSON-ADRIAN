@@ -25,6 +25,7 @@ public class Trabajador implements Serializable {
         this.DNI = DNI;
         this.id = id;
         this.Disponibilidad = Disponibilidad;
+        
     }
 
     /**

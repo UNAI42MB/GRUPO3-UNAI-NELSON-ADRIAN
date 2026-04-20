@@ -18,18 +18,8 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
     public Pantalla_fruteria() {
         initComponents();
         
-        try {
-    Font font = Font.createFont(Font.TRUETYPE_FONT,
-        getClass().getResourceAsStream("\"C:\\Users\\adria\\Documents\\NetBeansProjects\\U.N.A_Fruteria\\src\\tipografias\\Brunson.ttf\"")
-    ).deriveFont(18f);
 
-    jLabel1.setFont(font);
-
-} catch (Exception e) {
-    e.printStackTrace();
-    
-        
-}
+ 
     }
 
     /**
@@ -288,35 +278,44 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, -1, 410));
 
-        jLabel13.setFont(new java.awt.Font("Proxy 3", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Proxy 3", 3, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 0, 0));
         jLabel13.setText("FRUTA");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Proxy 3", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Proxy 3", 3, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 204, 51));
         jLabel14.setText("VERDURA");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 100, -1));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 100, -1));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 100, -1));
+        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 100, -1));
+        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 100, -1));
+        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 100, -1));
 
         jButton7.setBackground(new java.awt.Color(102, 51, 0));
         jButton7.setText("Añadir al carrito");
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel15.setText("Nombre");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 60, -1));
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel16.setText("Precio");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, -1, -1));
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel17.setText("Fecha Vencimiento");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 100, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 100, -1));
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel18.setText("Codigo identificador");
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo1 (1).png"))); // NOI18N
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, -1, 620));
@@ -327,8 +326,8 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 153, 51));
         jLabel19.setText("POVEEDOR");
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         jPanel3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 110, -1));
@@ -348,19 +347,28 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
         jButton9.setText("Volver");
         jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, -1, -1));
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 153, 0));
         jLabel20.setText("Nombre Empresa");
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 153, 51));
         jLabel21.setText("Precio por unidad");
         jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 153, 51));
         jLabel22.setText("Coste envio");
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 153, 0));
         jLabel23.setText("Fecha entrega");
         jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 153, 0));
         jLabel24.setText("Autentifiquese");
         jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
@@ -386,28 +394,38 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(262, 40, 590, -1));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 590, -1));
 
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 153, 0));
         jLabel42.setText("Telefono");
         jPanel3.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
         jPanel3.add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 110, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo_Cortando (1).png"))); // NOI18N
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 540));
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 860, 540));
 
         jDialog3.getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 540));
 
         jDialog4.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 0));
         jLabel26.setText("Repartidor");
         jDialog4.getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 0));
         jLabel27.setText("Inventario");
         jDialog4.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 0));
         jLabel28.setText("Cliente");
         jDialog4.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 0));
         jLabel29.setText("Proveedor");
         jDialog4.getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
@@ -505,7 +523,7 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
 
         jLabel30.setFont(new java.awt.Font("Vineta BT", 1, 48)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel30.setText("REPARTIDOR");
+        jLabel30.setText("TRABAJADOR");
         jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -601,6 +619,11 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 190, -1));
 
         jButton3.setText("Insertar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
 
         jButton4.setText("Cancelar");
@@ -640,16 +663,33 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    String seleccion = (String) jComboBox1.getSelectedItem();
+    
+    if(seleccion !=null){
+        
+        switch(seleccion){
+            
+            case"Cliente":
+                jDialog1.setSize(1020,620);
+                jDialog2.setVisible(true);
+                break;
+                
+            case"Administrador":
+            case"Proveedor":
+            case"Trabajador":
+                jDialog6.setSize(1020,620);
+                jDialog6.setVisible(true);
+                break;
+            
+        }
+        
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    jDialog2.setSize(1020,620);
+    jDialog2.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
         // TODO add your handling code here:
@@ -670,6 +710,42 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
     private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField24ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String seleccion = (String) jComboBox1.getSelectedItem();
+        
+        jDialog6.setVisible(false);
+        
+        if(seleccion != null){
+            switch(seleccion){
+                
+                case"Trabajador":
+                    jDialog5.setSize(1020,620);
+                    jDialog5.setVisible(true);
+                    break;
+                    
+                case"Proveedor":
+                    jDialog3.setSize(1020,620);
+                    jDialog3.setVisible(true);
+                    break;
+                    
+                case"Administrador":
+                    jDialog4.setSize(1020,620);
+                    jDialog4.setVisible(true);
+                    break;
+                
+                    
+            }
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments

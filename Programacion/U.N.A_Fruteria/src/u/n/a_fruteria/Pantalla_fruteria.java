@@ -733,7 +733,7 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 160, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 160, 30));
 
         jButton2.setBackground(new java.awt.Color(202, 184, 145));
         jButton2.setText("EXPLORAR PRODUCTOS");

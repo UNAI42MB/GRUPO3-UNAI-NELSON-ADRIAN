@@ -218,10 +218,10 @@ public class Pantalla_fruteria extends javax.swing.JFrame {
         jButton27.setText("Subir");
         jDialog1.getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
-        jButton28.setText("Borrar datos");
+        jButton28.setText("Borrar cliente");
         jDialog1.getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
 
-        jButton29.setText("Modificar datos");
+        jButton29.setText("Modificar cliente");
         jDialog1.getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         jButton30.setText("Buscar cliente");

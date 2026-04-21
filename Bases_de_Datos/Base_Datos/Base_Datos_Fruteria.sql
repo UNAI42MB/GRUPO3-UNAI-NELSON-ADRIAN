@@ -160,5 +160,57 @@ INSERT INTO Verdura VALUES
 (14,'Tallo'),  -- Pepinos
 (15,'Tallo');  -- Pimientos
 
+-- Usuarios del sistema
+CREATE USER 'admin_fruteria'@'%' IDENTIFIED BY 'Admin';
+CREATE USER 'trabajador_fruteria'@'%' IDENTIFIED BY 'Trabajador';
+CREATE USER 'cliente_fruteria'@'%' IDENTIFIED BY 'Cliente';
+
+-- Creacion de roles
+CREATE ROLE 'rol_admin';
+CREATE ROLE 'rol_trabajador';
+CREATE ROLE 'rol_cliente';
+
+-- Añadimos privilegios a admin, trabajador, cliente
+GRANT ALL PRIVILEGES ON Fruteria.* TO 'rol_admin';
+GRANT SELECT, INSERT, UPDATE ON Fruteria.* TO 'rol_trabajador';
+GRANT SELECT ON Fruteria.* TO 'rol_cliente';
+
+-- Con esto asignamos los roles a los usuarios
+GRANT 'rol_admin' TO 'admin_fruteria';
+GRANT 'rol_trabajador' TO 'trabajador_fruteria';
+GRANT 'rol_cliente' TO 'cliente_fruteria';
+
+-- y ponemos un rol predeterminado
+SET DEFAULT ROLE 'rol_admin' TO 'admin_fruteria';
+SET DEFAULT ROLE 'rol_trabajador' TO 'trabajador_fruteria';
+SET DEFAULT ROLE 'rol_cliente' TO 'cliente_fruteria';
+
+-- USO DE VISTAS
+CREATE VIEW vista_productos_trabajador AS
+SELECT  nombre_product,
+        precios,
+        fecha_vencimiento
+FROM producto;
+
+CREATE VIEW vista_productos_cliente AS
+SELECT  nombre_product,
+        fecha_vencimiento
+FROM producto;
+
+CREATE VIEW vista_productos_proveedor AS
+SELECT  p.ident_product,
+        p.nombre_product,
+        p.precios,
+        p.fecha_vencimiento,
+        pr.empresa
+FROM producto p
+JOIN proveedor pr
+     ON p.ident_prov = pr.ident_prov;
+
+GRANT SELECT ON vista_productos_trabajador TO 'empleado_fruteria';
+GRANT SELECT ON vista_productos_cliente TO 'consulta_fruteria';
+GRANT SELECT ON vista_productos_proveedor TO 'empleado_fruteria';
+
+
 
 

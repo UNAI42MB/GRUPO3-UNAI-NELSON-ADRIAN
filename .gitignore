@@ -8,6 +8,7 @@
 #Editores de Compilacion
 /build/
 /target/
+/dist/
 #Imagenes
 *.jpg
 *.gif
